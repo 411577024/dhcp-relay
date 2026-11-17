@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#30182f"><title>檢查輸出｜DHCP Relay 實作筆記</title><link rel="stylesheet" href="style.css"></head><body><header><div class="top"><span class="brand">DHCP Relay 實作筆記</span><nav aria-label="主選單"><a href="index.html">教學簡報</a><a href="wiki.html">主題 Wiki</a><a href="workflow.html">流程與紀錄</a></nav></div></header><main><div class="kicker">檢查紀錄</div><h1>兩次來源覆蓋檢查</h1><p>使用相同的六項教學問題，先帶入原五篇，再帶入完整六篇。代號用於確認文件是否收錄，內容正確性另以原文段落核對。</p><h2>原五篇</h2><pre>PASS  首次租址  S1
+PASS  中繼欄位  S2
+PASS  用戶端選項  S3
+PASS  helper 介面  S4
+PASS  位址池與租約  S5
+MISSING  回程路由語法  S6
+</pre><h2>增補後</h2><pre>PASS  首次租址  S1
+PASS  中繼欄位  S2
+PASS  用戶端選項  S3
+PASS  helper 介面  S4
+PASS  位址池與租約  S5
+PASS  回程路由語法  S6
+</pre><h2>成品驗收</h2><pre>PASS  4 個 HTML 檔；130 個站內連結、頁內錨點及資源引用。
+PASS  9 個簡報頁面與 Wiki 雙向對應；6 篇官方文件皆有摘記並實際引用。
+PASS  本例的 helper、預設閘道、位址池、回程網路與下一跳一致。
+瀏覽器實測（2026-11-17）
+PASS  從第 1 頁依序按「下一頁」至第 9 頁，逐次核對頁碼。
+PASS  第 9 頁可展開第一題解答；最後一頁的「下一頁」已停用。
+PASS  第 9 頁 → Wiki 條目 → 對應簡報第 9 頁 → 第 1 頁。
+</pre><a href="workflow.html">回到流程與反思</a></main><footer>DHCP Relay 實作筆記 · IPv4 網路教學</footer></body></html>

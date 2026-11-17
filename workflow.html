@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#30182f"><title>流程與執行紀錄｜DHCP Relay 實作筆記</title><link rel="stylesheet" href="style.css"></head><body><header><div class="top"><span class="brand">DHCP Relay 實作筆記</span><nav aria-label="主選單"><a href="index.html">教學簡報</a><a href="wiki.html">主題 Wiki</a><a href="workflow.html">流程與紀錄</a></nav></div></header><main><div class="kicker">實作紀錄 · 2026 / 11 / 17</div><h1>從資料到簡報</h1><p class="lead">本次採 Graph。先把每個教學問題對到可查的來源，再產生逐頁內容。遇到缺口就返回造成缺口的步驟。</p>
+<section class="entry" id="brief"><h2>製作前的討論</h2><p>以做過網段練習、第一次學 DHCP 的同學為讀者。需求摘要選定 DHCP Relay、繁體中文、保留英文封包名和 Cisco 指令、至少五篇官方資料、逐頁標示來源，並把資料核對放到排版之前。討論後，使用者回覆「繼續」，據此開始建置。</p></section>
+<section class="entry" id="graph"><h2>各步驟怎麼驗收？</h2>
+<div class="row"><strong>1 · 需求確認</strong><span>確定讀者、問題和來源範圍，將需求寫進 AGENTS.md。主題或讀者改變時，返回確認範圍。</span></div>
+<div class="row"><strong>2 · 取得資料</strong><span>逐篇閱讀 RFC 或 Cisco 文件，留下連結、章節、自己的摘記和適用範圍。缺乏原文依據就補來源。</span></div>
+<div class="row"><strong>3 · 查詢與整理 Wiki</strong><span>按九個教學問題查詢摘記、建立條目，並列出來源代號。協定依 RFC，設備實作依 Cisco。位址設計另標成教學例。</span></div>
+<div class="row"><strong>4 · 來源覆蓋檢查</strong><span>逐一核對首次租址、中繼欄位、用戶端選項、helper、位址池及回程路由。缺來源退回步驟 2；有來源但解釋超出原意，退回步驟 3，只修相關條目。</span></div>
+<div class="row"><strong>5 · 產生 HTML</strong><span>從通過檢查的 Wiki 條目取出教學文字與範例。每頁保留回到條目的連結，Wiki 也能連回對應簡報。</span></div>
+<div class="row"><strong>6 · 成品驗收</strong><span>檢查簡報頁數、來源、站內跳轉及案例位址。連結或呈現錯誤回到步驟 5；技術內容錯誤回到步驟 3。針對同一項最多重修兩次，仍缺證據就停下交由作者判斷。</span></div></section>
+<section class="entry" id="run"><h2>一次實際執行</h2><div class="row"><strong>原始五篇</strong><span>先讀三份 RFC 及 Cisco 中繼、伺服器兩篇文件。檢查案例時發現，大綱要教回程路由，卻沒有一篇專門支撐 Cisco 靜態路由的語法。以原五篇重跑覆蓋檢查，六項通過五項。</span></div>
+<div class="row"><strong>回到來源節點</strong><span>增讀 Cisco 路由指南的 Static Routes 段落，加入 S6。用 S1 說明回覆的目的地、用 S6 說明下一跳和指令，再整理第六頁。</span></div>
+<div class="row"><strong>重新檢查</strong><span>同一組六個主題全部有對應來源。九頁簡報均有對應 Wiki 條目，可由條目查到原始資料。此處記錄網站製作與檢查；講義中的路由器位址為教學案例。</span></div>
+<p><a href="checks.html">查看兩次覆蓋檢查與成品檢查輸出 →</a></p></section>
+<section class="entry" id="reflection"><h2>反思與調整</h2><p>在這一次執行中，具體發現的一項技術資料缺口出在「教學大綱對回來源」：協定資料能解釋回覆為何送往 giaddr，但要展示 Cisco 的回程指令，還需要設備文件。單純計算是否湊滿五篇，會漏掉這個問題。</p><p>因此把「每項教學主張是否有對應依據」提前到大綱階段，並在成品保留第二次連結檢查。前者抓資料缺口，後者抓排版後的引用與跳轉問題；兩關各自退回不同步驟。</p></section></main><footer>DHCP Relay 實作筆記 · IPv4 網路教學</footer></body></html>

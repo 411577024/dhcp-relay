@@ -1,0 +1,34 @@
+:root{--paper:#fff6ec;--ink:#30182f;--muted:#674c60;--line:#d9bfc7;--accent:#8b2752;--warm:#813d17;--pale:#f9e1ec;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7}
+*{box-sizing:border-box}body{margin:0}a{color:var(--accent);text-underline-offset:.21em}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #be4627;outline-offset:4px}header{border-bottom:1px solid var(--line)}.top,main,footer{width:min(1060px,calc(100% - 40px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:66px}.brand{font-weight:800;letter-spacing:.06em}.top nav{display:flex;gap:1.25rem}.top nav a{font-size:.92rem;font-weight:650}main{padding:clamp(24px,4vw,58px) 0}h1,h2,h3{line-height:1.27;text-wrap:balance}h1{font-size:clamp(2rem,5.3vw,4.15rem);margin:.27em 0 .55em}h2{font-size:clamp(1.65rem,4.5vw,3.1rem);margin:.3em 0 .55em}h3{font-size:1.16rem;margin:.55rem 0}p{margin:.65rem 0}.kicker,small{color:var(--muted);font-weight:650}.kicker{font-size:.85rem;letter-spacing:.08em}.lead{font-size:clamp(1.06rem,2.4vw,1.4rem);max-width:43em}.slide{padding:clamp(14px,3vw,38px) 0;min-height:470px}.slide[hidden]{display:none}.body{margin:1.4rem 0}.panel{padding:1.1rem 1.35rem;background:var(--pale);border-left:4px solid var(--accent);border-radius:0 12px 12px 0}.panel p:first-child{margin-top:0}.panel p:last-child{margin-bottom:0}.ctrl{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0;border-top:1px solid var(--line)}button,.action{border:1px solid var(--accent);color:var(--accent);background:var(--paper);font:inherit;font-weight:650;padding:.46rem .95rem;border-radius:7px;cursor:pointer}button:disabled{opacity:.38;cursor:default}.forward{background:var(--accent);color:white}.refs{font-size:.91rem;color:var(--muted);margin-top:1.1rem}.refs a{margin-right:.9em}.pages{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.pages a{padding:.15rem .58rem;border:1px solid var(--line);border-radius:6px;text-decoration:none}.pages a[aria-current]{background:var(--ink);color:white}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}.tile,details{border:1px solid var(--line);padding:1rem;border-radius:10px;background:white}.tile strong{display:block;font-size:1.06rem}.tile span{display:block;color:var(--muted)}code,pre,.mono{font-family:"IBM Plex Mono",Consolas,monospace}code{overflow-wrap:anywhere}pre{background:#30182f;color:#eafb9d;padding:1rem;border-radius:9px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.91rem}summary{cursor:pointer;color:var(--accent);font-weight:700}.note{color:var(--warm);font-weight:650}ol,ul{padding-left:1.5rem}li{margin:.35rem 0}.entry{padding:2rem 0;border-top:1px solid var(--line);scroll-margin-top:1rem}.entry h2{font-size:1.65rem}.source{background:white;border:1px solid var(--line);padding:1rem 1.25rem;margin:.6rem 0;border-radius:8px}.map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--accent);border-bottom:1px solid var(--line);margin:1.3rem 0}.map>div{padding:.7rem 1rem}.map>div+div{border-left:1px solid var(--line)}.map strong,.map span{display:block}.map small{font-size:.82rem}.map span{font-family:Consolas,monospace;font-size:.92rem}.row{display:grid;grid-template-columns:minmax(130px,.65fr) 1.8fr;gap:.85rem;padding:.6rem 0;border-bottom:1px solid var(--line)}footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:.86rem}
+/* Mulberry, apricot and citron. */
+header {
+  background: #30182f;
+  color: #fff6ec;
+  border-bottom: 4px solid #ed9b77;
+}
+header .brand { color: #eafb9d; }
+header nav a { color: #ffe2ea; }
+header a:focus-visible { outline-color: #eafb9d; }
+header a:hover { color: #eafb9d; }
+body {
+  background: radial-gradient(ellipse at top right, #ffe0cf 0, transparent 36rem) no-repeat, var(--paper);
+}
+.kicker { color: var(--accent); }
+.map {
+  border: 1px solid #b78b98;
+  border-top: 4px solid var(--ink);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.map > div:nth-child(1) { background: #f4cadb; }
+.map > div:nth-child(2) { background: #ffd8b2; }
+.map > div:nth-child(3) { background: #eafb9d; }
+.map small { color: #513b4c; }
+.panel { border-left-color: var(--accent); }
+.forward, .pages a[aria-current] { background: #eafb9d; color: var(--ink); border-color: var(--ink); }
+.forward:hover:enabled, .pages a:hover { background: #30182f; color: #eafb9d; }
+.source, details, .tile { background: #fffcf8; }
+.source:target, article.entry:target { border-top: 3px solid var(--accent); }
+pre { border-left: 4px solid #ed9b77; }
+@media(max-width:620px){.top,main,footer{width:calc(100% - 28px)}.top{align-items:flex-start;flex-direction:column;padding:12px 0;gap:5px}.top nav{gap:1rem}.slide{min-height:0}.map{grid-template-columns:1fr}.map>div+div{border-left:0;border-top:1px solid var(--line)}.row{grid-template-columns:1fr;gap:0}.ctrl{flex-wrap:wrap}.pages a{padding:.12rem .44rem}}
+@media print{.top nav,.ctrl,.pages,footer{display:none}.slide[hidden]{display:block}.slide{break-after:page;min-height:auto}.entry{break-inside:avoid}main{padding:0}body{background:white}}
